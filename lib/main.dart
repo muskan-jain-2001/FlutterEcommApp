@@ -1,5 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/products.dart';
+
 
 void main() {
   runApp(MaterialApp(
@@ -18,8 +20,9 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('Ecommerce'),
+          title: Text('FashionHub'),
           backgroundColor: Colors.cyan,
+          
           actions: <Widget>[
             IconButton(
               icon: Icon(
@@ -129,7 +132,7 @@ class Home extends StatelessWidget {
                   alignment: Alignment.centerLeft,
                   child: new Text(
                     'Categories',
-                    style: new TextStyle(fontSize: 15.0),
+                    style: new TextStyle(fontSize: 15.0,fontWeight: FontWeight.bold),
                   ),
                 ),
               ),
@@ -142,7 +145,7 @@ class Home extends StatelessWidget {
                         IconButton(
                           onPressed: () {},
                           icon: Image.asset('assets/clothing.jpg'),
-                          iconSize: 70,
+                          iconSize: 60,
                         ),
                         Text('Clothing'),
                         Padding(padding: EdgeInsets.all(4.0)),
@@ -153,7 +156,7 @@ class Home extends StatelessWidget {
                         IconButton(
                           onPressed: () {},
                           icon: Image.asset('assets/footwear.jpg'),
-                          iconSize: 70,
+                          iconSize: 60,
                         ),
                         Text('Footwear'),
                         Padding(padding: EdgeInsets.all(4.0)),
@@ -164,7 +167,7 @@ class Home extends StatelessWidget {
                         IconButton(
                           onPressed: () {},
                           icon: Image.asset('assets/beauty.png'),
-                          iconSize: 70,
+                          iconSize: 60,
                         ),
                         Text('Beauty'),
                         Padding(padding: EdgeInsets.all(4.0)),
@@ -175,7 +178,7 @@ class Home extends StatelessWidget {
                         IconButton(
                           onPressed: () {},
                           icon: Image.asset('assets/accesories.png'),
-                          iconSize: 70,
+                          iconSize: 60,
                         ),
                         Text('Accessories'),
                         Padding(padding: EdgeInsets.all(4.0)),
@@ -186,7 +189,7 @@ class Home extends StatelessWidget {
                         IconButton(
                           onPressed: () {},
                           icon: Image.asset('assets/jwellery.png'),
-                          iconSize: 70,
+                          iconSize: 60,
                         ),
                         Text('Jewellery'),
                         Padding(padding: EdgeInsets.all(4.0)),
@@ -197,7 +200,7 @@ class Home extends StatelessWidget {
                         IconButton(
                           onPressed: () {},
                           icon: Image.asset('assets/bags.png'),
-                          iconSize: 70,
+                          iconSize: 60,
                         ),
                         Text('Bags'),
                         Padding(padding: EdgeInsets.all(4.0)),
@@ -206,9 +209,26 @@ class Home extends StatelessWidget {
                   ],
                 ),
                 scrollDirection: Axis.horizontal,
+              ),
+              new Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Container(
+                  alignment: Alignment.centerLeft,
+                  child: new Text(
+                    'Top Deals',
+                    style: new TextStyle(fontSize: 15.0,fontWeight: FontWeight.bold),
+                  ),
+                ),
+              ),
+              Container(
+                height: 350.0,
+                child: Products(),
+                
               )
+              
             ],
           ),
-        ));
+        )
+        );
   }
 }

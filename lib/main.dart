@@ -1,6 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/products.dart';
+import 'package:flutter_application_1/topbrands.dart';
 
 
 void main() {
@@ -221,11 +222,42 @@ class Home extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 350.0,
+                height: 300.0,
                 child: Products(),
                 
-              )
-              
+              ),
+              new Padding(
+                padding: const EdgeInsets.all(2.0),
+                child: Container(
+                  alignment: Alignment.centerLeft,
+                  child: new Text(
+                    'Top Brands',
+                    style: new TextStyle(fontSize: 15.0,fontWeight: FontWeight.bold),
+                  ),
+                ),
+              ),
+              Container(
+                height: 300.0,
+                width: 350.0,
+                child: Topbrands(),
+                
+              ),
+              new Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Container(
+                  alignment: Alignment.centerLeft,
+                  child: new Text(
+                    'Recent Products',
+                    style: new TextStyle(fontSize: 15.0,fontWeight: FontWeight.bold),
+                  ),
+                ),
+              ),
+              Container(
+                height: 150.0,
+                width: 350.0,
+                child: Text("Oops!!No recent products"),
+                
+              ),
             ],
           ),
         )

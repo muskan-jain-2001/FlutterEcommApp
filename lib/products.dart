@@ -9,13 +9,13 @@ class _ProductsState extends State<Products> {
   // ignore: non_constant_identifier_names
   var product_list = [
     {
-      "name": "Men's T-Shirt",
+      "name": "T-Shirt",
       "picture": "assets/tshirt.jpg",
       "oldprice":150,
       "price": 80,
     },
     {
-      "name": "Women Plazo",
+      "name": "Plazo",
       "picture": "assets/plazo.jpg",
       "oldprice": 100,
       "price": 80,
@@ -85,6 +85,8 @@ class Single_prod extends StatelessWidget {
           footer:Container(
             color: Colors.white70,
             child: ListTile(
+              selectedTileColor: Colors.cyan,
+              horizontalTitleGap: 1.0,
               leading: Text(prod_name,style: TextStyle(fontWeight: FontWeight.bold),
               ),
               title: Text("\$$prod_price",style: TextStyle(color: Colors.red,fontWeight: FontWeight.bold),),
@@ -95,8 +97,7 @@ class Single_prod extends StatelessWidget {
                 decoration: TextDecoration.lineThrough),
                 ),
                 onTap: (){},
-                // hoverColor: Colors.blueGrey,
-                // autofocus: true,
+                
                 trailing: Row(   
                   mainAxisSize: MainAxisSize.min,       
             children: <Widget>[

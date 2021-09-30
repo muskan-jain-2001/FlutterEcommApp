@@ -59,6 +59,9 @@ flutter:
    - assets/plazo.jpg
    - assets/shoes.jpg
    - assets/handbag.jpg
+   - assets/lavie.jpg
+   - assets/bata.jpg
+   - assets/nike.jpg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 
